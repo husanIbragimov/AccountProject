@@ -15,3 +15,5 @@ def signup(request):
         login(request, user)
         return redirect('frontpage')
     return render(request, 'core/signup.html', {'form': form})
+
+
