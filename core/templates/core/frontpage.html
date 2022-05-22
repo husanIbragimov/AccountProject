@@ -1,9 +1,13 @@
 {% extends 'core/base.html' %}
 
-{% block title %}Welcome | {% endblock %}
-
 {% block content %}
 <div class="p-10 lg:p-20 text-center">
-    <h1 class="text-3xl lg:text-6xl text-white">Djangochat</h1>
+
+{% if request.user.is_authenticated %}
+    <h1 class="text-3xl lg:text-6xl text-black" style="color: blue;">Successfully entered </h1>
+{% else %}
+    <h1 class="text-3xl lg:text-6xl text-black" style="color: blue;">Project page</h1>
+{% endif %}
+
 </div>
 {% endblock %}
